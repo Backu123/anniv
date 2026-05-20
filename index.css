@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #a8e6ff, #dff6ff);
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.479);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    padding: 130px 120px;
+    width: min(90%, 400px);
+
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #222;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+#yes, #no {
+    position: relative; /* force same layout context */
+}
+
+button {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s ease;
+    border: 1px solid #222;
+}
+
+#yes {
+    transition: transform 0.3s ease;
+    transform-origin: center;
+    position: relative;
+    z-index: 1;
+}
+
+#no {
+    background: #ff4d4d;
+    color: white;
+    transition: left 0.3s linear, top 0.3s linear;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden; 
+}
+
+.heart {
+    position: absolute;
+    font-size: 20px;
+    animation: floatUp 1.5s linear forwards;
+    pointer-events: none;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-150px) scale(1.5);
+        opacity: 0;
+    }
+}
